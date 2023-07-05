@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --desaturatedDarkBlue: hsl(214, 17%, 51%);
+  --grayishBlue: hsl(208, 32%, 85%);
+  --lightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+}
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grayishBlue);
+}
+.box {
+  max-width: 800px;
+  display: flex;
+  border-radius: 15px;
+  background-color: var(--lightGrayishBlue);
+}
+.img-side {
+  width: 700px;
+  background-image: url("./images/drawers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px 0 0 15px;
+}
+.info-side {
+  padding: 20px 50px;
+  position: relative;
+}
+.info-side h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.info-side p {
+  line-height: 1.2rem;
+  opacity: 0.7;
+  margin-bottom: 2rem;
+}
+.profile {
+  max-height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile-img {
+  border-radius: 50%;
+  width: 3rem;
+}
+.info {
+  height: 2rem;
+  margin-left: -12rem;
+  margin-bottom: 0.6rem;
+}
+.logos {
+  position: absolute;
+  padding: 1rem;
+  width: 280px;
+  left: 58%;
+  bottom: 30%;
+  background-color: var(--desaturatedDarkBlue);
+  text-align: center;
+  border-radius: 10px;
+  letter-spacing: 1rem;
+  cursor: pointer;
+}
+.logos p {
+  display: inline;
+  color: #fff;
+  opacity: 0.6;
+  bottom: 5px;
+  padding-top: 15px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.underlogos {
+  padding: 5px;
+  width: 5px;
+  position: absolute;
+  left: 50%;
+  transform: rotate(45deg);
+  bottom: -5px;
+  background-color: var(--desaturatedDarkBlue);
+}
+.hidden {
+  display: none;
+}
+#name {
+  font-weight: 700;
+  font-size: 12px;
+}
+#date {
+  opacity: 0.6;
+  margin-top: -2rem;
+}
+.logo {
+  padding: 0.6rem;
+  border-radius: 50%;
+  background-color: var(--grayishBlue);
+  cursor: pointer;
+  border: none;
+  transition: 2s;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .box {
+    flex-direction: column;
+    height: 500px;
+    margin: 0 20px;
+  }
+
+  .img-side {
+    background-image: url("images/drawers.jpg");
+    width: 100%;
+    height: 20rem;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .info-side {
+    padding: 20px;
+  }
+
+  .logos {
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: 0;
+    padding: 25px;
+    width: 100%;
+    left: 175px;
+    z-index: 99;
+  }
+  .underlogos {
+    visibility: hidden;
+  }
+  .profile {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .info {
+    margin-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
